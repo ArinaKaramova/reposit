@@ -6,7 +6,17 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            double y, x;
+            Console.WriteLine("Введите x:");
+            x = double.Parse(Console.ReadLine());
+
+            y = YFunction(x);
+            Console.WriteLine("y =" + y);
+        }
+
+        static double YFunction(double x)
+        {
+            return (Math.Sqrt(Math.Sin(x) * Math.Sin(x) + 4) + Math.Tan(x)) / (Math.Cos(x) * Math.Cos(x) + 4);
         }
     }
 }
